@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ChildsChild from "./ChildsChild.js";
 
 class SecondChild extends Component {
   constructor(props) {
@@ -13,6 +14,9 @@ class SecondChild extends Component {
       <div className="SecondChild">
         SecondChild {this.state.title}
         <button onClick={() => this.updateTitle()}>Update</button>
+
+        <br/>
+        <ChildsChild store={this.componentStore} />
       </div>
     );
   }
